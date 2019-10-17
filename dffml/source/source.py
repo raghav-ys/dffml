@@ -46,7 +46,13 @@ class BaseSourceContext(BaseDataFlowFacilitatorObjectContext):
         """
         Get a repo from the source or add it if it doesn't exist
         """
-
+ 
+class base_entry_point(BaseDataFlowFacilitatorObject):
+    """
+    Abstract base class for all sources. New sources must be derived from this
+    class and implement the repos method.
+    """
+  
 @base_entry_point("dffml.source", "source")
 class BaseSource(BaseDataFlowFacilitatorObject):
     """
