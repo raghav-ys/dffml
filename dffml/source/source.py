@@ -55,7 +55,6 @@ class BaseSource(BaseDataFlowFacilitatorObject):
     class and implement the repos method.
     """
 
-
     def __call__(self) -> BaseSourceContext:
         return self.CONTEXT(self)
 
