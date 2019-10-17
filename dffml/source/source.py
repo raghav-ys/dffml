@@ -47,15 +47,15 @@ class BaseSourceContext(BaseDataFlowFacilitatorObjectContext):
         Get a repo from the source or add it if it doesn't exist
         """
 
-
+@base_entry_point("dffml.source", "source")
 class BaseSource(BaseDataFlowFacilitatorObject):
     """
     Abstract base class for all sources. New sources must be derived from this
     class and implement the repos method.
     """
 
-    ENTRY_POINT = "dffml.source"
-    ENTRY_POINT_NAME = ["source"]
+    #ENTRY_POINT = "dffml.source"
+    #ENTRY_POINT_NAME = ["source"]
 
     def __call__(self) -> BaseSourceContext:
         return self.CONTEXT(self)
